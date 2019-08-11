@@ -1,0 +1,15 @@
+回顾
+    什么是组件
+    如何定义一个组件 
+    组件如何引用
+    组件的作用
+
+练习（5 mins）
+    用cli命令生成一个组件 demo001-component, 其被根组件AppComponent组件引用, 浏览器最终显示 Hello OES,I'm coming!
+    
+FAQ
+    快速生成一个组件：ng g c demo001-component
+    
+渴望点：
+  AppComponent根组件作用是啥？
+  整个应用是如何启动的？

@@ -1,0 +1,20 @@
+回顾
+    什么是模块
+    根模块的作用
+    模块中主要有哪些元数据
+    什么场景下使用模块
+
+练习（5 mins）
+    用cli命令生成一个特性模块demo002-module，模块中创建一个组件 demo-module-basic.模块demo002-module被AppModule引用。
+    浏览器显示：“我已经掌握组件、模块概念！”
+
+FAQ
+  快速生成一个module：
+  ng g m demo002-module
+  cd demo002-module
+  ng g c demo-module-basic 或者 ng g c demo-module-basic --flat
+
+渴望点：
+  指令、管道、服务
+
+
