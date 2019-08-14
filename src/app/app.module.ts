@@ -6,6 +6,8 @@ import {AppComponent} from './app.component';
 import {Demo001ComponentComponent} from './demo001-component/demo001-component.component';
 import {Demo002ModuleModule} from './demo002-module/demo002-module.module';
 import { Demo003TemplateComponent } from './demo003-template/demo003-template.component';
+import { HeroDetailComponent } from './demo003-template/hero-detail/hero-detail.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 /** 特殊的特性模块（根模块）AppModule
  * bootstrap 指定了这个模块启动的时候应该启动的组件.这些组件会被自动的加入到entryComponents
@@ -18,10 +20,13 @@ import { Demo003TemplateComponent } from './demo003-template/demo003-template.co
   declarations: [
     AppComponent,
     Demo001ComponentComponent,
-    Demo003TemplateComponent
+    Demo003TemplateComponent,
+    HeroDetailComponent
   ],
   imports: [
     BrowserModule, // 提供了启动和运行应用的基础设施
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     Demo002ModuleModule
   ],

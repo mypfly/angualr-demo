@@ -1,0 +1,11 @@
+div {
+  margin-left: 16px;
+}
+
+div span {
+  margin: 8px 32px;
+}
+
+.title {
+  font-weight: bold;
+}

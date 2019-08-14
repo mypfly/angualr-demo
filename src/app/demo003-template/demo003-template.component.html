@@ -1,1 +1,33 @@
-<p>demo003-template works!</p>
+<div>
+  <!--1. 插值表达式-->
+  <div class="title">1. 插值表达式</div>
+  <div>我最喜欢的英雄是: {{myHero}}</div>
+  <div><img src="{{img}}"></div>
+  <div>1 + 1 = {{1+1}}</div>
+  <div>The sum of 1 + 1 is not {{1 + 1 + getVal()}}</div>
+
+  <!--2. 模板表达式-->
+  <div class="title">2. 模板表达式</div>
+  <div *ngIf="isDisplay" style="display: inline"><img [src]="img2"></div>
+  <!--这个目标名就是属性（Property）的名字。它可能看起来像是元素属性（Attribute）的名字，但它不是。 要理解它们的不同点，你必须尝试用另一种方式来审视模板中的 HTML-->
+  <button type="button" class="btn btn-primary" (click)="hiddenImg()">隐藏</button>
+
+  <!--3. 常用绑定-->
+  <div class="title">3. 常用绑定</div>
+  <div>属性绑定/事件绑定/模板引用个/viewchild/双向绑定</div>
+  <div>
+    <app-hero-detail (modifyHero)="getModifyHero($event)" [hero]="myHero" #heroRef></app-hero-detail>
+    <!--<input type="text" value="模板引用： {{heroRef.getLiBai()}}" style="display: block;margin: 8px 0;width: 400px">-->
+    <!--<input type="text" value="ViewChild: {{heroDetailComponent.getHanxin()}}" style="display: block;margin: 8px 0;width: 400px">-->
+    <!--
+        <div class="form-group">
+          <input type="text" [(ngModel)]="twoWayBinding"/>
+          <span style="color:red">{{twoWayBinding}}</span>
+        </div>
+    -->
+  </div>
+
+  <!--4. 指令-->
+
+
+</div>
