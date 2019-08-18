@@ -1,0 +1,14 @@
+<!--内置管道-->
+<p>The hero's birthday is {{ birthday | date }}</p>
+<p>The hero's birthday is {{birthday | date:'yyyy-MM-dd HH:mm:ss'}}</p>
+<p>The hero's sex is {{sex | uppercase}}</p>
+
+<!--链式管道-->
+<p>The chained hero's birthday is {{ birthday | date | uppercase}}</p>
+
+
+<!--自定义管道-->
+<p>Super power boost: {{2 | pipeDemo: 10}}</p>
+
+
+

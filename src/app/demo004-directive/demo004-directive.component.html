@@ -1,0 +1,46 @@
+<!--属性型指令用于改变一个 DOM 元素的外观或行为-->
+<div class="title">4. 属性指令</div>
+<!--内置属性指令 ngClass ngStyle-->
+<div [style.color]="isSpecial ? 'red' : 'black'" (click)="changeColor()">This div is x-large or smaller.</div>
+<div [ngStyle]="{'color': isSpecial?'red' : 'blue'}">This div is x-large or smaller.</div>
+
+<div [class.demo-color]="isSpecial">This div is x-large or smaller.</div>
+<div [ngClass]="{'demo-color': isSpecial}">This div is x-large or smaller.</div>
+
+<!--自定义属性指令-->
+<div>
+  <input type="radio" name="colors" (click)="color='lightgreen'">Green
+  <input type="radio" name="colors" (click)="color='yellow'">Yellow
+  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+<p [appHighlight]="color">Highlight me!</p>
+
+
+<!--结构型指令的职责是 HTML 布局。 它们塑造或重塑 DOM 的结构，比如添加、移除或维护这些元素 -->
+<!--内置结构指令-->
+<!-- NgIf - 根据条件把一个元素添加到 DOM 中或从 DOM 移除
+    NgSwitch 一组指令，用来在多个可选视图之间切换。
+    NgForOf - 对列表中的每个条目重复套用同一个模板
+    <ng-template>
+    <ng-container>
+    -->
+
+<div class="title">5. 结构指令</div>
+<div *ngIf="hero" class="name">{{hero.name}}</div>
+
+<ul>
+  <li *ngFor="let hero of heroes" (click)="selectHero(hero)" style="cursor: pointer">{{hero.name}}</li>
+</ul>
+
+<div [ngSwitch]="currentHero?.emotion">
+  <app-happy *ngSwitchCase="'happy'" [hero]="currentHero"></app-happy>
+  <app-sad *ngSwitchCase="'sad'" [hero]="currentHero"></app-sad>
+  <app-unknown *ngSwitchDefault [hero]="currentHero"></app-unknown>
+</div>
+
+<!--内置结构指令-->
+<!--自定义,重写*nfIf-->
+<div *appStruct="false">(A) This paragraph is displayed because the condition is false.</div>
+<div *appStruct="true">(B) Although the condition is true, this paragraph is displayed because appUnless is set to
+  false.
+</div>

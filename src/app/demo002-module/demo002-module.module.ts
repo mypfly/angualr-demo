@@ -1,7 +1,15 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {DemoModuleBasicComponent} from './demo-module-basic/demo-module-basic.component';
+import {RouterModule, Routes} from '@angular/router';
+const routes: Routes = [
+  {
+    path: '',
+    component: DemoModuleBasicComponent
+  }
+];
 
+export const appChildRouteModule = RouterModule.forChild(routes);
 
 /** @NgModule 模块装饰器，标识 Demo002ModuleModule 为angular能识别的特性模块,里面的元素表示模块的元数据
  * 元数据
@@ -16,7 +24,8 @@ import {DemoModuleBasicComponent} from './demo-module-basic/demo-module-basic.co
 @NgModule({
   declarations: [DemoModuleBasicComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    appChildRouteModule,
   ],
   exports: [DemoModuleBasicComponent],
   providers: [],

@@ -1,0 +1,19 @@
+<p>ng generate module app-routing --flat --module=app
+  --flat 把这个文件放进了 src/app 中，而不是单独的目录中。
+  --module=app 告诉 CLI 把它注册到 AppModule 的 imports 数组中。
+</p>
+
+<!--模板中使用路由-->
+<nav>
+  <a routerLink="/demo001">组件基础</a>
+  <a routerLink="/demo002">模块</a>
+  <a routerLink="/demo003">模板</a>
+  <a routerLink="/demo004">指令</a>
+  <a routerLink="/demo007/{{'兰陵王'}}">路由</a>
+</nav>
+
+<!--浏览器中使用-->
+<div>路由传参是：<span style="color: red">{{routerParameter}}</span></div>
+
+<!--组件中使用路由-->
+<button type="button" (click)="back()">跳转到demo1</button>
